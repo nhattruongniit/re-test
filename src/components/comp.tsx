@@ -9,7 +9,7 @@ export function C1(props: IProps) {
     genQuery(props.timeRange, 'c1', Math.random()) // this allway return same result because Math.random() only return a number from [0,1).
   ); // only init once
   const [forceRefresh, setForceRefresh] = useState(0);
-  const { loading, data, error } = useApi<number>(query, forceRefresh);
+  const { loading, data, error } = useApi<string>(query, forceRefresh);
   const trackingRendered = useRef(0);
   useEffect(() => {
     trackingRendered.current++; // increment every time the component render
@@ -39,7 +39,7 @@ export function C2(props: IProps) {
   );
   const [forceRefresh, setForceRefresh] = useState(0);
 
-  const { loading, data, error } = useApi<number>(query, forceRefresh);
+  const { loading, data, error } = useApi<string>(query, forceRefresh);
   const trackingRendered = useRef(0);
   useEffect(() => {
     trackingRendered.current++;
@@ -67,7 +67,7 @@ export function C3(props: IProps) {
 
   const [forceRefresh, setForceRefresh] = useState(0);
 
-  const { loading, data, error } = useApi<number>(query, forceRefresh);
+  const { loading, data, error } = useApi<string>(query, forceRefresh);
   const trackingRendered = useRef(0);
   useEffect(() => {
     trackingRendered.current++;
@@ -95,7 +95,7 @@ export function C4(props: IProps) {
   );
   const [forceRefresh, setForceRefresh] = useState(0);
 
-  const { loading, data, error } = useApi<number>(query, forceRefresh);
+  const { loading, data, error } = useApi<string>(query, forceRefresh);
 
   const trackingRendered = useRef(0);
   useEffect(() => {
@@ -124,7 +124,7 @@ export function C5(props: IProps) {
   );
   const [forceRefresh, setForceRefresh] = useState(0);
 
-  const { loading, data, error } = useApi<number>(query, forceRefresh);
+  const { loading, data, error } = useApi<string>(query, forceRefresh);
 
   const trackingRendered = useRef(0);
   useEffect(() => {
